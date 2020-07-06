@@ -27,6 +27,6 @@ RUN apt-get install -y default-libmysqlclient-dev
 
 WORKDIR /usr/src/app
 COPY python-library.txt ./
-#RUN pip3 install --no-cache-dir -r python-library.txt
-RUN --mount=type=cache,target=/root/.cache/pip pip3 install -r python-library.txt
+RUN pip3 install --no-cache-dir -r python-library.txt
+#RUN --mount=type=cache,target=/root/.cache/pip pip3 install -r python-library.txt
 COPY . .

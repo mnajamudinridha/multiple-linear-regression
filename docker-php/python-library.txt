@@ -1,0 +1,10 @@
+numpy
+pandas
+matplotlib
+statsmodels
+seaborn
+jupyter
+sqlalchemy
+pymysql
+patsy
+mysqlclient

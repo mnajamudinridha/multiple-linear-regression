@@ -96,6 +96,12 @@
                   <span class="nav-link-text">Data Prediksi</span>
                 </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link <?php echo ($menu == "ujicoba" ? "active" : "");?>" href="index.php?menu=ujicoba">
+                <i class="ni ni-ui-04"></i>
+                  <span class="nav-link-text">Data Uji</span>
+                </a>
+              </li>
             </ul>
 
             <hr class="my-3">

@@ -29,27 +29,6 @@
                 *********************************************** */
                 elseif ($menu == 'login') {
                     include 'module/login/admin.php';
-                }elseif ($menu == 'cafe') {
-                    if ($aksi == 'tambah') {
-                        include 'module/cafe/tambah.php';
-                    }if ($aksi == 'edit') {
-                        include 'module/cafe/edit.php';
-                    }else{
-                        include 'umum/kafe.php';
-                    }
-                }elseif ($menu == 'rangking') {
-                    include 'umum/rangking.php';
-                }elseif ($menu == 'pencarian') {
-                    include 'umum/pencarian.php';
-                }
-                elseif ($menu == 'nilais') {
-                    if ($aksi == 'tambah') {
-                        include 'module/nilai/tambah.php';
-                    } elseif ($aksi == 'edit') {
-                        include 'module/nilai/edit.php';
-                    } else {
-                        include 'umum/nilai.php';
-                    }
                 }
             
                 /* ********************************************
@@ -59,8 +38,6 @@
                     include 'module/profil/edit.php';
                 } elseif ($menu == 'register') {
                     include 'module/profil/tambah.php';
-                } elseif ($menu == 'detailbarang') {
-                    include 'umum/detailbarang.php';
                 } 
                 /* ********************************************
                 * MODUL admin
@@ -73,15 +50,7 @@
                     } else {
                         include 'module/admin/tampil.php';
                     }
-                } elseif ($menu == 'user') {
-                    if ($aksi == 'tambah') {
-                        include 'module/user/tambah.php';
-                    } elseif ($aksi == 'edit') {
-                        include 'module/user/edit.php';
-                    } else {
-                        include 'module/user/tampil.php';
-                    }
-                } elseif ($menu == 'laporan') {
+                }  elseif ($menu == 'laporan') {
                     if ($aksi == 'tambah') {
                         include 'module/laporan/tambah.php';
                     } elseif ($aksi == 'edit') {
@@ -137,6 +106,14 @@
                     } else {
                         include 'module/generate/tampil.php';
                     }
+                } elseif ($menu == 'ujicoba') {
+                    if ($aksi == 'tambah') {
+                        include 'module/ujicoba/tambah.php';
+                    } elseif ($aksi == 'edit') {
+                        include 'module/ujicoba/edit.php';
+                    } else {
+                        include 'module/ujicoba/tampil.php';
+                    }
                 } elseif ($menu == 'prediksi') {
                     if ($aksi == 'tambah') {
                         include 'module/prediksi/tambah.php';
@@ -144,22 +121,6 @@
                         include 'module/prediksi/prediksi.php';
                     } else {
                         include 'module/prediksi/tampil.php';
-                    }
-                } elseif ($menu == 'kafe') {
-                    if ($aksi == 'tambah') {
-                        include 'module/kafe/tambah.php';
-                    } elseif ($aksi == 'edit') {
-                        include 'module/kafe/edit.php';
-                    } else {
-                        include 'module/kafe/tampil.php';
-                    }
-                } elseif ($menu == 'menus') {
-                    if ($aksi == 'tambah') {
-                        include 'module/menus/tambah.php';
-                    } elseif ($aksi == 'edit') {
-                        include 'module/menus/edit.php';
-                    } else {
-                        include 'module/menus/tampil.php';
                     }
                 } elseif ($menu == 'rangking') {
                     if ($aksi == 'tambah') {

@@ -14,9 +14,15 @@ if (isset($_POST['kirim'])) {
     $jumlah = mysqli_num_rows($query);
     if ($jumlah > 0) {
         foreach ($kuisioner as $key => $value) {
-            mysqli_query($con, "UPDATE dataset
-            SET value='$value'
-            WHERE kode='$kode' AND kuisioner='$key'");
+            $cek = mysqli_query($con, "SELECT * FROM dataset WHERE kode='$kode' AND kuisioner='$key'");
+            $total = mysqli_num_rows($cek);
+            if($total > 0){
+                mysqli_query($con, "UPDATE dataset
+                SET value='$value'
+                WHERE kode='$kode' AND kuisioner='$key'");
+            }else{
+                mysqli_query($con, "INSERT INTO dataset (id,kode,kuisioner,value) VALUES (NULL, '$kode','$key','$value')");
+            }
         }
         header('location:../../index.php?menu=dataset');
     } else {
